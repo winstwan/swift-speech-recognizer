@@ -12,7 +12,7 @@ let package = Package(
         .library(name: "SwiftSpeechCombine", targets: ["SwiftSpeechCombine"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "0.2.0"),
+        .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.1.0"),
     ],
     targets: [
         .target(name: "SwiftSpeechRecognizer", dependencies: []),
