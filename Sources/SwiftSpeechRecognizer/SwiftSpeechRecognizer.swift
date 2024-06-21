@@ -96,8 +96,8 @@ private final class SpeechRecognitionSpeechEngine: NSObject, ObservableObject, S
         guard let recognitionRequest = recognitionRequest
         else { throw SpeechRecognitionEngineError.speechAudioBufferRecognitionRequestInitFailed }
         recognitionRequest.shouldReportPartialResults = true
-        // Make some test, we could probably keep all speech recognition data on the devices
-        // recognitionRequest.requiresOnDeviceRecognition = true
+        // Keep all speech recognition data on the devices
+        recognitionRequest.requiresOnDeviceRecognition = true
 
         guard let speechRecognizer = speechRecognizer
         else { throw SpeechRecognitionEngineError.speechRecognizerInitFailed }
